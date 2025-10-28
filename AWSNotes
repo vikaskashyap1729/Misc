@@ -1,42 +1,4 @@
-vikaskashyap_k@hotmail.com 
-D:\d1\Tech\AWS\saac03 
- 
-Course Github Repo : https://github.com/acantril/aws-sa-associate-saac03 
-Course Github HTTPS Clone Link : https://github.com/acantril/aws-sa-associate-saac03.git 
- 
-Labs: https://github.com/acantril/learn-cantrill-io-labs 
- 
-Git commands: 
-git clone https://github.com/acantril/aws-sa-associate-saac03.git 
-git cd aws-sa-associate-saac03-main 
-git pull 
- 
- 
-Account Creation: 
-vickynewaws@gmail.com 
-H3# 
-vikaskashyap.k+General1@gmail.com / vicky-aws-general1 (Management) 
-https://vicky-aws-general1.signin.aws.amazon.com/console 
-genIAMadminuser 
-cligenIAMadminuser 
- 
-vikaskashyap.k+Prod1@gmail.com / prod1-vicky-aws 
-https://prod1-vicky-aws.signin.aws.amazon.com/console 
-prodIAMadminuser 
-cliprodIAMadminuser 
- 
-vikaskashyap.k+Dev1@gmail.com / dev1-vicky-aws / 841961777593 
- 
-Domain/Website: sumneondwebsite.click / vikaskashyap.k+General1@gmail.com / Google Voice # 
- 
--> Enable MFA 
--> Set Billing Alerts 
--> Create Budget (Zero Cost v/s Limit Set Cost) 
- 
- 
--> can activate/deactivate 
--> can create 2 sets of keys per user (useful for rotation) 
--> deactivate access key before deletion 
+
  
  
 IAM: 
