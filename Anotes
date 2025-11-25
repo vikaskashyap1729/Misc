@@ -4431,7 +4431,202 @@ TTL 
  
  the Item 
  
+ --------- 
+Athena 
  
+:Serverless Interactive Querying Service 
+:Queries on data in S3 and such 
+:Schema-on-read : table-like translation 
+:Original data in S3 is not changed - No Writes 
+:Schema translates data into RDBMS like data 
+:like ETL 
+:can read many data formats such as CloudTrail 
+ 
+-> good for ad-hic queries 
+-> serverless keeps cost low 
+-> suits where full-fledged data transformation is not needed. 
+ 
+------------ 
+ElastiCache 
+ 
+:In-memory DB for High Performance Apps 
+:Managed Redis or Memcached -> as a service 
+:Reduced DB workloads 
+:can be used to store Session data: helps build Stateless app 
+:helps with read heavy apps 
+ 
+:But needs App code changes 
+ 
+Two engines 
+1)Memcached 
+:Simple data structures 
+:No replication 
+:No backups 
+:Multi-threaded 
+ 
+2)Redis 
+:Advanced Structures: Stacks, Lists 
+:Multi-AZ 
+:Scalable-> Replication 
+:Backup & Restore 
+:Supports Transactions -> aids Consistency 
+ 
+------------ 
+Redshift 
+ 
+:Datawarehouse 
+:OLAP 
+:Direct Query S3 -> Redshift Spectrum 
+:Direct Query other DBs -> Federated Query 
+:SQL-like interface JDBC/ODBC conn 
+:Server based 
+ 
+Leader Node: Planning, Aggregation,  Other App-connections 
+-> Standard JDBC/ODBC compatible apps 
+Compute Node (Have several Slices): perform queries 
+ 
+For VPC Networking needs Enhanced VPC Routing 
+ 
+Data Sources: S3, DMS, Kinesis Firehose 
+Automatic Backups: 8hrs/5GB 
+ 
+===================================== 
+Machine Learning 
+ 
+Amazon Comprehend 
+ 
+: NLP 
+: Input -> Text 
+: Output -> Phrases, Sentiments, PII, etc 
+: pre-trained models 
+: Real-time analysis for small workloads; Async jobs for large 
+: Console/CLI/APIs access 
+ 
+Demo: 
+Launch Comprehend 
+ 
+-- 
+Amazon Kendra 
+ 
+: Intelligent Search 
+: Factoid, Descriptive, checks Keyword to determine intent 
+ 
+:Index 
+:Data Source -> both structured and unstructured 
+-> Index builds on Data Source based on schedule 
+ 
+: Integrates with AWS Services 
+ 
+--- 
+Amazon Lex 
+ 
+:Text/Voice conversational interface 
+:Powers Alexa 
+:Automatic Speech Recognition (ASR): speech to text 
+:Natural Language Understanding (NLU): Intent 
+:Build understanding into app 
+:Used for Chatbots, Voice Assistants, etc. 
+ 
+:Can only be integrated into App. No Console Access 
+:Creates Conversational Bots 
+:Extracts 'Intent', 'Utterances', 'Slots'(parameters) 
+-> Intent fulfilled thru Lambda 
+ 
+--- 
+Amazon Polly 
+: Converts Text to "Life-Like" Speech. No Translation 
+ 
+Standard: Concatenative (phonemes) 
+Neural: Phonemes => Spectrograms => Vocoder => Audio 
+-> much more complex, used AO 
+ 
+O/p formats: mp3, PCM, etc. 
+ 
+:used Speech Synthesis Markup Language (SSML) 
+-> additional control over how Polly generates speech 
+-> like emphasis on words, pronunciation, whispering, etc. 
+ 
+------ 
+Amazon Rekognition 
+ 
+:Deep Learning Image and Video Analysis 
+:Identify stuff: objects, face detection/analysis 
+:Per Image or Minute pricing 
+:Integrates with apps and event-driven 
+:Can analyze live video streams: Kinesis video streams 
+ 
+------- 
+Amazon Textract 
+ 
+:Detect and Analyze text from images/docs 
+:Input-> jgeg, png, pdf or tiff 
+:Output -> Extracted text, structure 
+ 
+:Console or API, and AWS services 
+ 
+:identified relationship b/n text. Extracts Metadata 
+Ex: Document Analysis (identify DOB, Address, etc.) 
+Identity Document (PassportID, etc) 
+ 
+Demo 
+ 
+------------ 
+Amazon Transcribe 
+ 
+:Automatic Speech Recognition (ASR) service 
+:Input-Audio | Output-Text 
+:Language Customization, Privacy Filters, Audience-appropriate language 
+ 
+:Full text indexing of Audio -> allows searching 
+:Take Meeting Notes 
+:Generate Subtitles/captions for audio and Transcripts 
+:Call Analytics (characteristics, Summarization, etc) 
+:Integration into other apps/ML services 
+ 
+ 
+---------- 
+Amazon Translate 
+ 
+:Text Translation 
+:Encoder reads source;  
+:Decoder reads meaning => writes to target language 
+:Attention mechanisms ensure meaning is translated. 
+ 
+:integrates with other AWS services like Polly and S3, RDS 
+  -> so usually part of a process, so it's a backend service 
+:can translate incoming data 
+ 
+----------------- 
+Amazon Forecast 
+ 
+:Forecasting of time-series data 
+:Forecast demand, supply chain, server capacity, etc. 
+:Imports historical & related data 
+:Output -> Forecast and Explainability 
+:Web console, CLI, APIs 
+ 
+----------------- 
+Amazon Fraud Detector 
+ 
+:Fraud Detection service 
+-> looks at historical data and patterns 
+: detects Online Fraud, Account Takeover 
+ 
+:Things are scored: Rules/Decision Logic allow to score based on business activity 
+ 
+ 
+----------------- 
+Amazon SageMaker 
+ 
+:Implementation of Fully Managed Machine Learning (ML) Service 
+:A bundle of products 
+:Completed ML lifecycle: Fetch, Clean, Prepare, Train, Evaluate, Deploy. Monitor/Collect 
+ 
+============================== 
+ 
+ 
+ 
+
  
 
  
