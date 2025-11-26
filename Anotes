@@ -68,8 +68,7 @@ Default VPC 
  
  
  
-Vicky-AWS-General1 
-920373020246 
+
  
 1)Create General and Prod accounts 
  -> provide IAM User and Role access to Billing Info 
@@ -2075,7 +2074,7 @@ Create 
 Task Definition: New Task 
  : Task Name: containerofcats 
  : Container – 1 Name: containerofcatsweb 
- : Image URI : docker.io/vicky1729/containerofcats (or docker.io/acantril/containerofcats ) 
+ : Image URI :  
  : Port: 80/TCP/HTTP 
 Next 
 OS: Linux/X86_64, CPU: 0.5v, Memory: 1GB 
